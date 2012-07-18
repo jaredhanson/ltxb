@@ -1,0 +1,6 @@
+xml.n('superhero')
+  .c('name', { 'primary': 'true' }).t(name).up();
+
+aliases.forEach(function(alias) {
+  xml.c('alias').t(alias);
+});
