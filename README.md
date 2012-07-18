@@ -1,5 +1,35 @@
 # ltxb
 
+Less-Than XML builder templates for Node.js, based on [ltx](https://github.com/astro/ltx).
+
+## Installation
+
+    $ npm install ltxb
+
+## Usage
+
+ltxb is an [Express](http://expressjs.com/)-compatible template engine.  It also
+exposes `compile` and `render` functions for integration with other frameworks.
+
+Define views using Less-Than XML builder syntax.  `xml` is an instance of
+`Element` provided by the [ltx](https://github.com/astro/ltx) module.  Refer to
+the [README](https://github.com/astro/ltx#building-xml-elements) for a complete
+syntax reference.
+
+    xml.n('hello')
+      .c(name);
+
+Render the view with in a route, passing locals to be substituted into the XML
+output.
+
+    res.render('hello.ltxb', { name: 'Dave' });
+
+## Tests
+
+    $ npm install --dev
+    $ make test
+
+[![Build Status](https://secure.travis-ci.org/jaredhanson/ltxb.png)](http://travis-ci.org/jaredhanson/ltxb)
 
 ## Credits
 
