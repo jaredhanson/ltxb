@@ -1,0 +1,2 @@
+doc.n('foo')
+  .c('bar')
