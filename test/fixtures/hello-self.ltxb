@@ -1,0 +1,2 @@
+xml.n('greetings')
+  .c('hello', {'name': self.name })
